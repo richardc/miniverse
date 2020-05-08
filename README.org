@@ -1,0 +1,48 @@
+#+title: Miniverse: Thingiverse Downloads Manager
+#+startup: showeverything
+
+* Introduction
+
+With the exciting addition of a 3d printer to my life I was finding
+myself downloading a bunch of files from thingiverse to browse and
+maybe print later.
+
+Soon I was up to me knees in a small pile of zipfiles that I wanted to
+extract, in a consistently named way, that also lets me get back to
+the original thingiverse page.  That's all in the
+~zip/attribution_card.html~ so it's just a case of extracting it,
+scraping it, and doing as it says.
+
+* Usage
+
+** miniverse store ZIPFILE
+
+Take a file or files and unpack them into the local miniverse
+directory.
+
+** miniverse refile DIRECTORY
+
+Takes a directory name, move it into the correct place in the miniverse.
+
+** miniverse home
+
+When in a miniverse directory, open up the corresponding thingiverse
+page in your browser.
+
+** miniverse get THINGID
+
+Given a thingiverse id, download the 'All files' zipfile, then
+~miniverse store~ it.
+
+* Configuration
+
+Create a TOML file =~/.config/miniverse/config.toml=.
+
+#+BEGIN_SRC toml
+# where your miniverse is
+root = ~/src/3d-printing/thingiverse
+# where to move zipfiles to
+archive = ~/src/3d-printing/thingiverse/zips
+# directory naming pattern within the miniverse
+pattern = %ID%_%TITLE%
+#+END_SRC
