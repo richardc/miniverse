@@ -4,8 +4,10 @@ class Miniverse::Thing
   class LicenseParse < ThingLoadError; end
 
   attr_reader :path
+  attr_reader :url
   attr_reader :id
   attr_reader :title
+  attr_reader :author
 
   def initialize(path)
     @path = path
@@ -34,6 +36,6 @@ class Miniverse::Thing
   end
 
   def to_s
-    "thing<class=#{self.class} path=#{path} id=#{id} title=#{title}>"
+    "thing<class=#{self.class} path=#{path} url=#{url} id=#{id} title=#{title}>"
   end
 end

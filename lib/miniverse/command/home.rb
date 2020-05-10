@@ -3,7 +3,11 @@ class Miniverse::Command::Home < Miniverse::Command
     "Visit a homepage"
   end
 
+  parameter "THINGS ...", "things to visit", attribute_name: :things, default: ['.']
+
   def execute
-    puts "Going to hell"
+    things.each do |thing|
+      puts Miniverse::ThingLoader.load_thing(thing).url
+    end
   end
 end
