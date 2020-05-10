@@ -1,5 +1,6 @@
 module Miniverse
   require 'miniverse/version'
-  require 'miniverse/zipfile'
+  require 'miniverse/thing'
+  require 'miniverse/thing_loader'
   require 'miniverse/cli'
 end
