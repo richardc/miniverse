@@ -5,5 +5,5 @@ class Miniverse::Command < Clamp::Command
     self.to_s
   end
 
-  option "--root", "ROOT", "root", attribute_name: :miniverse, default: "~/miniverse"
+  option "--miniverse", "PATH", "the path to your miniverse", attribute_name: :miniverse, default: "~/miniverse"
 end

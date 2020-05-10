@@ -9,6 +9,10 @@ class Miniverse::Cli < Miniverse::Command
     subcommand name, klass.description, klass
   end
 
+  def self.description
+    "miniverse: thingiverse downloads manager"
+  end
+
   load_command "home"
   load_command "store"
 end
