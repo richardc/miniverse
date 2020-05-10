@@ -1,3 +1,10 @@
+PATH
+  remote: .
+  specs:
+    miniverse (0.0.1)
+      clamp
+      rubyzip
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -22,9 +29,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  clamp
+  miniverse!
   rspec
-  rubyzip
 
 BUNDLED WITH
    2.1.4

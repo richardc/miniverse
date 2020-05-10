@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rubyzip'
-gem 'rspec'
-gem 'clamp'
+gemspec
+
+group :test do
+  gem 'rspec'
+end
