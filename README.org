@@ -10,39 +10,17 @@ maybe print later.
 Soon I was up to me knees in a small pile of zipfiles that I wanted to
 extract, in a consistently named way, that also lets me get back to
 the original thingiverse page.  That's all in the
-~zip/attribution_card.html~ so it's just a case of extracting it,
+~zip/LICENSE.txt~ so it's just a case of extracting it,
 scraping it, and doing as it says.
 
 * Usage
 
-** miniverse store ZIPFILE
+** miniverse store THINGS
 
-Take a file or files and unpack them into the local miniverse
-directory.
+Take a Thing, which may be a zipfile or extracted directory, and
+stores it in the miniverse directory according to the naming scheme.
 
-** miniverse refile DIRECTORY
+** miniverse home THINGS
 
-Takes a directory name, move it into the correct place in the miniverse.
-
-** miniverse home
-
-When in a miniverse directory, open up the corresponding thingiverse
-page in your browser.
-
-** miniverse get THINGID
-
-Given a thingiverse id, download the 'All files' zipfile, then
-~miniverse store~ it.
-
-* Configuration
-
-Create a TOML file =~/.config/miniverse/config.toml=.
-
-#+BEGIN_SRC toml
-# where your miniverse is
-root = ~/src/3d-printing/thingiverse
-# where to move zipfiles to
-archive = ~/src/3d-printing/thingiverse/zips
-# directory naming pattern within the miniverse
-pattern = %ID%_%TITLE%
-#+END_SRC
+Opens up the thingiverse homepage for the given things in your
+browser.  Will defaults to =['.']= (thing in the current working directory)
