@@ -5,6 +5,8 @@ class Miniverse::Thing::Directory < Miniverse::Thing
   end
 
   def store(miniverse)
-    puts "Renaming directory #{path} into #{miniverse}"
+    target = "#{miniverse}/#{miniverse_path}"
+    puts "Renaming directory #{path} into #{target}"
+    File.rename(path, target)
   end
 end

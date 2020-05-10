@@ -32,7 +32,11 @@ class Miniverse::Thing
     raise NotImplementedError
   end
 
-  def format_path(format)
+  # The name of the directory we should extract to inside the miniverse directory
+  def miniverse_path
+    # sanitisie the title so it works as a path
+    safe_title = title.gsub(/[\/:]/, "__")
+    "#{id}_#{safe_title}"
   end
 
   def to_s
