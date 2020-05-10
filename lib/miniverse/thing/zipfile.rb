@@ -6,7 +6,20 @@ class Miniverse::Thing::Zipfile < Miniverse::Thing
   end
 
   def store(miniverse)
-    puts "Storing zipfile #{path} into #{miniverse}"
+    target = "#{miniverse}/#{miniverse_path}"
+    if File.exists?(target)
+      puts "Skipping #{path} - #{target} already exists"
+      return
+    end
+
+    puts "Extracting #{path} into #{target}"
+    Dir.mkdir(target)
+    Zip::File.open(path) do |zip|
+      zip.each do |entry|
+        puts "    #{entry.name}"
+        zip.extract(entry, "#{target}/#{entry.name}")
+      end
+    end
   end
 
   private
