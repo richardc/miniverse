@@ -1,0 +1,11 @@
+#+title: Changelog
+
+* Changelog
+All major changes will be tracked here.
+
+** Unreleased
+
+** 0.0.1 [2020-05-11 Mon]
+Initial version.
+
+Just your basic MVP
