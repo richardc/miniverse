@@ -13,6 +13,7 @@ class Miniverse::Cli < Miniverse::Command
     "miniverse: thingiverse downloads manager"
   end
 
+  load_command "version"
   load_command "store"
   load_command "home"
   load_command "link"

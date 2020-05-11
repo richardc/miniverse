@@ -4,6 +4,7 @@
 All major changes will be tracked here.
 
 ** Unreleased
+*** Add ~miniverse version~ command
 
 ** 0.0.1 [2020-05-11 Mon]
 Initial version.
