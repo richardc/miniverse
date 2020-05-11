@@ -4,10 +4,12 @@
 All major changes will be tracked here.
 
 ** Unreleased
+
+** 0.0.2 [2020-05-11]
 *** Add ~miniverse version~ command
 *** Make gem version follow lib/miniverse/version.rb
 
-** 0.0.1 [2020-05-11 Mon]
+** 0.0.1 [2020-05-11]
 Initial version.
 
 Just your basic MVP
