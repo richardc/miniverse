@@ -22,6 +22,10 @@ class Miniverse::Thing::Zipfile < Miniverse::Thing
     end
   end
 
+  def remove
+    File.unlink(path)
+  end
+
   private
   def get_zipped_file(file)
     Zip::File.open(path) do |zip|

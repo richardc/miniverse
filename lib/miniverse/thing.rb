@@ -32,6 +32,10 @@ class Miniverse::Thing
     raise NotImplementedError
   end
 
+  def remove
+    puts "Removing #{self.class} #{path} not implemented"
+  end
+
   # The name of the directory we should extract to inside the miniverse directory
   def miniverse_path
     # sanitisie the title so it works as a path

@@ -5,10 +5,15 @@ class Miniverse::Command::Store < Miniverse::Command
 
   parameter "THINGS ...", "things to store", attribute_name: :things
 
+  option ['--remove'], :flag, "remove original"
+
   def execute
     things.each do |path|
       thing = Miniverse::ThingLoader.load_thing(path)
       thing.store(miniverse)
+      if remove?
+        thing.remove
+      end
     end
   end
 end
