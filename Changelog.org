@@ -4,6 +4,9 @@
 All major changes will be tracked here.
 
 ** Unreleased
+
+
+** 0.0.3 [2020-05-19]
 *** Add ~--remove~ flag to ~miniverse store~.  When storing a zipfile it will
 unlink the original
 
