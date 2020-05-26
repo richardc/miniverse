@@ -8,5 +8,6 @@ Gem::Specification.new do |s|
   s.files = Dir['lib/**/*.rb']
   s.add_dependency 'rubyzip'
   s.add_dependency 'clamp'
+  s.add_dependency 'thingiverse'
   s.executables << 'miniverse'
 end
