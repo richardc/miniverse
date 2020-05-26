@@ -1,4 +1,5 @@
 require 'thingiverse'
+require 'json'
 
 class Miniverse::Command::Info < Miniverse::Command
   def self.description
@@ -13,7 +14,7 @@ class Miniverse::Command::Info < Miniverse::Command
     tv = Thingiverse::Connection.new
     tv.access_token = token
     things.each do |thing_id|
-      puts tv.things.find(thing_id).files.first.name
+      puts tv.things.find(thing_id).attributes.to_json
     end
   end
 end
