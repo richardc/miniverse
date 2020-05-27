@@ -4,7 +4,7 @@ require 'miniverse/thing/thingiverse'
 require 'miniverse/thing/unthing'
 
 class Miniverse::ThingLoader
-  def self.load_thing(path, client)
+  def self.load_thing(path, client = nil)
     begin
       if path.end_with?(".zip")
         Miniverse::Thing::Zipfile.new(path)
