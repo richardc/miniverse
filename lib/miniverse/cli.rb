@@ -17,5 +17,4 @@ class Miniverse::Cli < Miniverse::Command
   load_command "store"
   load_command "home"
   load_command "link"
-  load_command "info"
 end

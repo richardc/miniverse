@@ -6,4 +6,5 @@ class Miniverse::Command < Clamp::Command
   end
 
   option "--miniverse", "PATH", "the path to your miniverse", attribute_name: :miniverse, default: "~/miniverse"
+  option "--token", "TOKEN", "the api token to use with thingiverse", attribute_name: :token
 end
