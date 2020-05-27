@@ -27,7 +27,9 @@ class Miniverse::Thing::Thingiverse < Miniverse::Thing
     Dir.mkdir("#{target}/files")
     @thing.files.each do |file|
       puts "  files/#{file.name} #{file.public_url}"
-      Curl::Easy.download(file.public_url, "#{target}/files/#{file.name}")
+      Curl::Easy.download(file.public_url, "#{target}/files/#{file.name}") do |easy|
+        easy.follow_location = true # follow redirects
+      end
     end
   end
 end
